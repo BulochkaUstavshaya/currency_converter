@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        .form-currency-converter{
+            text-align: center;
+            padding-top: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <div class="form-currency-converter">
+        <form action="" method="post" >
+            <p>
+            {% csrf_token %}
+            {% for item in form %}
+            {{ item.label }}
+            {{ item }}
+            {% endfor %}
+            </p>
+            <p><button type="submit">Конвертировать</button></p>
+            {% if amount %}
+                <p>Получаю {{ amount }}<p/>
+            {% endif %}
+        </form>
+        </div>
+{% endblock %}
