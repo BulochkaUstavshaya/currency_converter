@@ -1,4 +1,4 @@
 .idea
 venv
 app/db.sqlite3
-__pycache__/
+**/__pycache__/
